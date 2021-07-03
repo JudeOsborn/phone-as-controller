@@ -7,6 +7,10 @@ const staticFiles = 'public';
 
 app.use(express.static(staticFiles));
 
+app.get('/screen', function response(req, res) {
+  res.sendFile('screen.html', { root: __dirname + '/' + staticFiles});
+});
+
 app.get('*', function response(req, res) {
   res.sendFile('remote.html', { root: __dirname + '/' + staticFiles});
 });
