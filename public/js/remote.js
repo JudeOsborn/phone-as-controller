@@ -23,7 +23,7 @@ function update() {
   x = x / maxAngles.x * -1;
   y = y / maxAngles.y * -1;
 
-  console.log(x, y);
+  socket.emit('position', {x: x, y: y});
 
   requestAnimationFrame(update);
 }

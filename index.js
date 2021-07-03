@@ -25,9 +25,11 @@ server.listen(port, '0.0.0.0', function onStart(err) {
 });
 
 const remote = io.of('/remote');
+const screen = io.of('/screen');
 
 remote.on('connection', (remote) => {
   remote.on('position', (position) => {
     console.log(position);
+    screen.emit('position', position);
   });
 });
