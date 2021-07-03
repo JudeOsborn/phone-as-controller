@@ -1,3 +1,4 @@
+const socket = io('/remote');
 const maxAngles = {x: 20, y: 24};
 
 const promise = new FULLTILT.getDeviceOrientation({ 'type': 'world' });
