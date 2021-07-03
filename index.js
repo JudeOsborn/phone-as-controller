@@ -29,7 +29,6 @@ const screen = io.of('/screen');
 
 remote.on('connection', (remote) => {
   remote.on('position', (position) => {
-    console.log(position);
     screen.emit('position', position);
   });
 });

@@ -10,7 +10,7 @@ socket.on('position', (position) => {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   cursor.element = document.getElementById('cursor');
-  window.requestAnimationFrame(update);
+  window.requestAnimationFrame(update);  
 })
 
 function update() {
