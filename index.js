@@ -4,6 +4,7 @@ const http = require('http');
 const server = http.createServer(app);
 const port = 8080;
 const staticFiles = 'public';
+const io = require('socket.io')(server);
 
 app.use(express.static(staticFiles));
 
@@ -21,4 +22,12 @@ server.listen(port, '0.0.0.0', function onStart(err) {
   }
 
   console.info('Open http://0.0.0.0:%s in your browser to view the remote.', port);
+});
+
+const remote = io.of('/remote');
+
+remote.on('connection', (remote) => {
+  remote.on('position', (position) => {
+    console.log(position);
+  });
 });
