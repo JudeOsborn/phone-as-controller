@@ -6,6 +6,7 @@ promise.then((controller) => {
 
 // Convert the phone's gyro data into screen coordinates.
 function update() {
-  console.log(deviceOrientation.getScreenAdjustedEuler());
+  let data = deviceOrientation.getScreenAdjustedEuler();
+  console.log(data);
   requestAnimationFrame(update);
 }
