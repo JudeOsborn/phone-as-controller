@@ -11,7 +11,7 @@ socket.on('position', (position) => {
 document.addEventListener('DOMContentLoaded', (event) => {
   cursor.element = document.getElementById('cursor');
   window.requestAnimationFrame(update);  
-})
+});
 
 function update() {
   cursor.element.style.transform = 
