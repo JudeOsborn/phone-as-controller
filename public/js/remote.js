@@ -1,4 +1,7 @@
 const promise = new FULLTILT.getDeviceOrientation({ 'type': 'world' });
+
+let deviceOrientation;
+
 promise.then((controller) => {
   deviceOrientation = controller;
   update();
