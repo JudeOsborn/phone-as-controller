@@ -1,6 +1,7 @@
 const socket = io('/remote');
 const maxAngles = {x: 20, y: 24};
 
+let deviceOrientation;
 let alpha = 0;
 let alphaOffset = 0;
 
