@@ -1,5 +1,7 @@
 const maxAngles = {x: 20, y: 24};
 
+let deviceOrientation;
+
 const promise = new FULLTILT.getDeviceOrientation({ 'type': 'world' });
 promise.then((controller) => {
   deviceOrientation = controller;
